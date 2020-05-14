@@ -3,7 +3,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import json
 
 data = {'result': 'this is a http server test'}
-host = ('182.92.114.73', 8080)
+host = ('172.17.253.202', 8080)
 
 class Resquest(BaseHTTPRequestHandler):
     def do_GET(self):
