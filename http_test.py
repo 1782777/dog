@@ -12,9 +12,10 @@ class Resquest(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(json.dumps(data).encode())
         
-    def go_POST(self):
+    def do_POST(self):
         data = self.rfile.read(int(self.headers["content-length"]))
-        print(data)
+        for field in form.keys():
+            print(field)
 
 if __name__ == '__main__':
     server = HTTPServer(host, Resquest)
